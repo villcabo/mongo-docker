@@ -12,8 +12,8 @@ services:
     volumes:
       - mongo-7:/data/db
     environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME:-}mongo
-      MONGO_INITDB_ROOT_PASSWORD: mongo
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME:-mongo}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD:-mongo}
       MONGO_INITDB_DATABASE: mongo-demo
     ports:
       - ${MONGO_PORT:-0.0.0.0:27017}:27017
